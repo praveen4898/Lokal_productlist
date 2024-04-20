@@ -1,7 +1,9 @@
 const productId = new URLSearchParams(window.location.search).get('id');
 fetch(`https://productsjson-kph3.onrender.com/products/${productId}`)
     .then(response => response.json())
+    
     .then(product => {
+        console.log(product)
         const productDetailsContainer = document.getElementById('product-details');
         const productImagesContainer = document.createElement('div'); 
         productImagesContainer.classList.add("imagecont")

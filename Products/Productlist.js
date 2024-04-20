@@ -2,7 +2,9 @@ let productsData = [];
 
 fetch('https://productsjson-kph3.onrender.com/products')
     .then(response => response.json())
+    
     .then(data => {
+        console.log(data);
         productsData = data;
         displayProducts(data);
     })
@@ -15,9 +17,7 @@ function displayProducts(data) {
     data.forEach(product => {
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
-        productCard.onclick = function() {
-            productDetails(product.id);
-        };
+     
     
         const img = document.createElement('img');
         img.src = product.thumbnail;
@@ -28,11 +28,20 @@ function displayProducts(data) {
     
         const paragraph = document.createElement('p');
         paragraph.textContent = '$'+product.price;
-    
+        
+
+        const detailsbutton=document.createElement('button')
+        detailsbutton.textContent="More Details"
+
+      detailsbutton.onclick = function() {
+            productDetails(product.id);
+        };
+
         productCard.appendChild(img);
         productCard.appendChild(heading);
         productCard.appendChild(paragraph);
-    
+       productCard.appendChild(detailsbutton)
+
         productListContainer.appendChild(productCard);
     });
     
@@ -40,6 +49,7 @@ function displayProducts(data) {
 
 function productDetails(productId) {
     window.location.href = `productdetails.html?id=${productId}`;
+  detailsbutton.disabled=true
 }
 
 function sortProductsByPrice(order) {
