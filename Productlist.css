@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(166, 226, 225);
+}
+
+
+.cardcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   background-color: rgb(20, 155, 142);
+}
+
+.product-card {
+    border: 1px solid #6d6a6a;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(166, 226, 225);
+    text-align: center;
+  
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.controls button:hover{
+    background-color: rgb(20, 155, 142);
+    color: white;
+}
+
+.controls button {
+    margin-right: 10px;
+}

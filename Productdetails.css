@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(166, 226, 225);
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(20, 155, 142);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+}
+
+.product-details img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    
+}
+
+.imagecont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   gap:10px;
+
+}

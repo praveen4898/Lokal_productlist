@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="Productlist.css">
+</head>
+<body>
+    <div class="controls">
+        <button  onclick="sortProductsByPrice('asc')">Sort by Price (Low to High)</button>
+
+        <button  onclick="sortProductsByPrice('desc')">Sort by Price (High to Low)</button>
+
+
+        <select onchange="filterProductsByCategory(this.value)">
+            <option value="">All Categories</option>
+            <option value="cat1">Category 1</option>
+            <option value="cat2">Category 2</option>
+            <option value="cat3">Category 3</option>
+            <option value="cat4">Category 4</option>
+        </select>
+    </div>
+    
+    <div id="product-list" class="cardcontainer"></div>
+
+
+    <script src="Productlist.js"></script>
+</body>
+</html>
