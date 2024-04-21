@@ -48,8 +48,9 @@ function displayProducts(data) {
 }
 
 function productDetails(productId) {
+    
     window.location.href = `productdetails.html?id=${productId}`;
-  detailsbutton.disabled=true
+  
 }
 
 function sortProductsByPrice(order) {
